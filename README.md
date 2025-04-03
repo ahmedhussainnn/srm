@@ -18,6 +18,9 @@ This Student Result Management System is a web application designed to streamlin
 
 This system simplifies the management of student data within an educational institution. It provides a web interface for administrators/lecturers to manage students, courses, and results, and for students to view their results and raise disputes. This version uses a Spring Boot backend API.
 
+## Video Walkthrough
+[https://streamable.com/mbgbpv](https://streamable.com/mbgbpv)
+
 ## Features
 
 (Based on implemented API endpoints and intended frontend functionality)
