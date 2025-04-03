@@ -57,8 +57,8 @@ This system simplifies the management of student data within an educational inst
 
 3.  **Firebase Credentials:**
     * This project requires a Firebase Admin SDK service account key file.
-    * The generation script placed a file named `student-result-managemen-....json` in `src/main/resources/`.
-    * **SECURITY:** This file contains sensitive private keys. **DO NOT COMMIT IT** to version control. Manage it securely. See [Security Note](#security-note).
+    * It is named `student-result-managemen-....json` in `src/main/resources/`.
+    * **SECURITY:** This file contains sensitive private keys. 
 
 4.  **Build (Optional):**
     ```bash
@@ -98,16 +98,11 @@ The backend provides REST API endpoints under the `/api` prefix. Authentication 
 * **Auth:** `POST /api/auth/login`, `POST /api/auth/signup`
 * **Courses:** `GET, POST /api/courses`, `PUT, DELETE /api/courses/{id}`
 * **Students:** `GET, POST /api/students`, `GET, PUT, DELETE /api/students/{id}`
-* **Lecturers:** `GET, POST /api/lecturers`, `DELETE /api/lecturers/{id}` (Add GET/PUT if needed)
-* **Results:** `GET, POST /api/results`, `DELETE /api/results/{id}` (Add GET/PUT if needed)
-* **Disputes:** `GET, POST /api/disputes` (Add GET/PUT/DELETE by ID if needed)
+* **Lecturers:** `GET, POST /api/lecturers`, `DELETE /api/lecturers/{id}` (May add GET/PUT if needed)
+* **Results:** `GET, POST /api/results`, `DELETE /api/results/{id}` (May add GET/PUT if needed)
+* **Disputes:** `GET, POST /api/disputes` (May add GET/PUT/DELETE by ID if needed)
 
 Refer to the controller classes in `src/main/java/com/example/srm/controller/` for request/response details.
-
-## Security Note
-
-* **Credentials:** The Firebase Admin SDK key embedded in this project is highly sensitive. In any real-world application, secure methods like environment variables, cloud secret managers, or volume mounts would be used to provide credentials to the application. **Never hardcode keys.**
-* **Authentication/Authorization:** The current role handling is basic (hardcoded emails/simple role strings). Implement proper Spring Security with token validation (e.g., JWTs obtained from Firebase Auth) and role-based authorization for API endpoints.
 
 ## TODOs / Improvements
 
